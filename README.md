@@ -1,14 +1,14 @@
-# [EduMatch] 🎯
+# EduMatch 🎯
 
 
 ## Basic Details
-### Team Name: [HackHeaven]
+### Team Name: HackHeaven
 
 
 ### Team Members
-- Member 1: [Niha Fathima] - [College of Engineering Pathanapuram]
-- Member 2: [Pavithra CS] - [College of Engineering Pathanapuram]
-- Member 3: [Arya Krishnan] - [College of Engineering Pathanapuram]
+- Member 1: Niha Fathima - [College of Engineering Pathanapuram]
+- Member 2: Pavithra CS - [College of Engineering Pathanapuram]
+- Member 3: Arya Krishnan - [College of Engineering Pathanapuram]
 
 ### Hosted Project Link
 https://github.com/nihaninnu/tink-her-hack-3-temp
