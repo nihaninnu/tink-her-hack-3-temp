@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMatch - User Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background: #1a1f2c;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background: #20273a;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            font-family: 'Italiana', serif;
+            color: #4a90e2;
+        }
+
+        .home-btn, .logout-btn {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .home-btn:hover, .logout-btn:hover {
+            text-decoration: underline;
+        }
+
+        .profile-info {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .profile-info p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .user-details {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .user-details div {
+            text-align: center;
+        }
+
+        .matches-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .matches-link a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .matches-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">EduMatch</div>
+        <a href="index.html" class="home-btn">Home</a> <!-- Link to index.html -->
+        <a href="login.html" class="logout-btn">Log Out</a>
+    </div>
+
+    <!-- User Profile Information -->
+    <div class="profile-info">
+        <h1>Welcome, Niha</h1>
+        <p>Here are your details:</p>
+
+        <div class="user-details">
+            <div>
+                <h3>Email</h3>
+                <p>niha123@gmail.com</p>
+            </div>
+            <div>
+                <h3>Major</h3>
+                <p>Computer Science</p>
+            </div>
+            <div>
+                <h3>Interests</h3>
+                <p>web developing</p>
+                <p>Machine learning</p>
+                <p>Artificial Intelligence</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Matches Page -->
+    <div class="matches-link">
+        <a href="matches.html">View Your Matches</a>
+    </div>
+
+</body>
+</html>

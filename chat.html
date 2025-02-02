@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMatch - Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background: #1a1f2c;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .navbar {
+            background: #20273a;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .chat-container {
+            width: 90%;
+            max-width: 500px;
+            background: #20273a;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+        }
+
+        .chat-header {
+            font-size: 1.5rem;
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 1rem;
+            border-radius: 5px;
+            background: #1a1f2c;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            background: #4a90e2;
+            padding: 0.7rem;
+            border-radius: 10px;
+            margin: 0.3rem 0;
+            width: fit-content;
+            max-width: 75%;
+        }
+
+        .message.sent {
+            align-self: flex-end;
+            background: #357abd;
+        }
+
+        .input-container {
+            display: flex;
+            width: 100%;
+        }
+
+        input {
+            flex: 1;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+
+        button {
+            background: #4a90e2;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #357abd;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="matches.html">Back to Matches</a>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-header" id="chat-header">Chat with</div>
+        <div class="messages" id="messages"></div>
+        <div class="input-container">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Get matched user from URL
+        const params = new URLSearchParams(window.location.search);
+        const matchName = params.get('name') || "Unknown";
+        document.getElementById("chat-header").textContent = "Chat with " + matchName;
+
+        // Chat messages array (temporary local storage)
+        let messages = [];
+
+        function sendMessage() {
+            const messageInput = document.getElementById("message-input");
+            const messageText = messageInput.value.trim();
+
+            if (messageText) {
+                messages.push({ text: messageText, sender: "You" });
+                updateChat();
+                messageInput.value = "";
+            }
+        }
+
+        function updateChat() {
+            const messagesContainer = document.getElementById("messages");
+            messagesContainer.innerHTML = "";
+            messages.forEach(msg => {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("message");
+                if (msg.sender === "You") messageElement.classList.add("sent");
+                messageElement.textContent = msg.text;
+                messagesContainer.appendChild(messageElement);
+            });
+
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>

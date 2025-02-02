@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMatch - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1f2c;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 2.5rem;
+            background: linear-gradient(145deg, #20273a, #1c2436);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            font-family: 'Italiana', serif;
+        }
+
+        .edu {
+            color: #ffffff;
+        }
+
+        .match {
+            color: #4a90e2;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            color: #8e9cb4;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4a90e2;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: #4a90e2;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background: #357abd;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #6b7897;
+            font-size: 0.9rem;
+        }
+
+        .login-link a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="logo">
+            <span class="edu">Edu</span><span class="match">Match</span>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required placeholder="Confirm your password">
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="login-link">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

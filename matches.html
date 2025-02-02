@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMatch - Matches</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            background: #1a1f2c;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background: #20273a;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            font-family: 'Italiana', serif;
+            color: #4a90e2;
+        }
+
+        .matches-section {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .matches-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .match-card {
+            background: #20273a;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            width: 280px;
+            vertical-align: top;
+        }
+
+        .match-card h3 {
+            margin: 0.5rem 0;
+            color: #4a90e2;
+        }
+
+        .match-card p {
+            color: #6b7897;
+        }
+
+        .match-card .button {
+            background: #4a90e2;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .match-card .button:hover {
+            background: #357abd;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-link a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">EduMatch</div>
+        <a href="login.html" class="logout-btn">Log Out</a>
+    </div>
+
+    <!-- Matches Section -->
+    <div class="matches-section">
+        <h2>Your Matches</h2>
+
+        <!-- Match Card 1 -->
+        <div class="match-card">
+            <h3>[Match 1 Ram]</h3>
+            <p>[Computer Science]</p>
+            <p>[AI]</p>
+            <a href="chat.html?name=Ram" class="button">Message</a>
+        </div>
+
+        <!-- Match Card 2 -->
+        <div class="match-card">
+            <h3>[Match 2 Celin]</h3>
+            <p>[CS]</p>
+            <p>[ML,AI]</p>
+            <a href="chat.html?name=Celin" class="button">Message</a>
+        </div>
+
+        <!-- Match Card 3 -->
+        <div class="match-card">
+            <h3>[Match 3 Alen]</h3>
+            <p>[CS]</p>
+            <p>[Web developing]</p>
+            <a href="chat.html?name=Alen" class="button">Message</a>
+        </div>
+
+    </div>
+
+    <!-- Back to User Details Page Link -->
+    <div class="back-link">
+        <a href="user-details.html">Back to Your Profile</a>
+    </div>
+
+</body>
+</html>
